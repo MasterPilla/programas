@@ -1,10 +1,15 @@
 #include <stdio.h>
-main(){
-   int *p, i, mat[10] ={1, 2, 3, 4, 4, 7, 8, 9, 5, 4};
-   p=mat;
-   for(i=0; i<=9; i++)     {
-         printf("\n mat[%d] = %d ", i, *p);
-         printf("\tDirección: %x", p);
-              p++;
-   }
+int mi_arreglo[] = {1,23,17,4,-5,100};
+int *ptr;
+int main(void)
+{
+ int i;
+ ptr = &mi_arreglo[0]; 
+ printf("\n\n");
+ for (i = 0; i < 6; i++)
+ {
+ printf("mi_arreglo[%d] = %d ", i, mi_arreglo[i]); 
+ printf("ptr + %d = %d\n",i, *(ptr + i)); 
+ }
+ return 0;
 }
